@@ -2,6 +2,7 @@ var countryInfo = [];
 
 var submitBtn = document.getElementById("Submit-btn");
 var inputArea = document.getElementById("Search-box");
+let countryFlagEl = document.getElementById('country-flag')
 
 // Function to fetch data from Country API
 function fetchApiData() {
@@ -10,25 +11,40 @@ function fetchApiData() {
 
   fetch(restUrl)
     .then(function (response) {
-      return response.json();
+      return response.json(); 
     })
     .then(function (data) {
       console.log(data);
       // Added elements onto page
+      let infoArray = [];
       infoArray = data.infoArray;
-      for (let i = 0; i < infoArray; i++) {
-        let { name } = data.infoArray[i];
-        var countryFlag = flags.png;
+        // let { name } = data.infoArray[i];
+        let countryFlag = document.createElement('img');
+        countryFlag = data[0].flags.png;
+        
+
+        // document create element - delete img tag in html 
+        $("#country-flag-div").append(countryFlag);
         // No img replace with something
-        if (!image_url)
-          image_url =
-            "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg";
+        console.log(countryFlag);
+        // if (!image_url)
+        //   image_url =
+        //     "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg";
+
         //Var to add pulled elements to the page
-        //rename ${}
+
+        let countryName = document.getElementById('display-country-info');
+        countryName.textcontent = data[0].name.common;
+        // console.log(countryName);
+        // let population = ;
+        // let capital = ;
+        // let continents = ;
+        // let currencies = ;
+
         var newBox = `
             <div class ="new-country-info">
                 <div class="new-country-text">
-                    <h1>Country: ${name.common}</h1>
+                    <h1>Country: ${countryName}</h1>
                     <p>Population: ${population} </p>
                     <p>Capital: ${capital}  </p>
                     <p>Continent: ${continents}  </p>
@@ -37,9 +53,9 @@ function fetchApiData() {
             </div>
         `;
         $("#display-country-info").append(newBox);
-        $("#country-flag").append(countryFlag);
+        
+        // console.log(countryFlag);
         // console.log(infoArray[name]);
-      }
       //console log error if it happens
     })
     .catch((error) => console.log("Error fetchin Yelp data:", error));
