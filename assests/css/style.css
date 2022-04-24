@@ -55,6 +55,7 @@ html {
 .control {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 1rem;
 }
 
@@ -109,15 +110,13 @@ html {
     * {
         flex-direction: column;
         justify-content: center;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    * {
-        flex-direction: column;
-        justify-content: center;
         text-align: center;
+    }
+
+    .control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -126,5 +125,32 @@ html {
       flex-direction: column;
       justify-content: center;
       text-align: center;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #travel-logo {
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    #travel-logo {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #travel-logo {
+        width: 15rem;
+    }
+    .country-flag {
+        width: 250px;
+        height: 150px;
+    }
+
+    .media-flag {
+        width: 200px;
+        height: 115px;
     }
 }

@@ -46,7 +46,7 @@ function fetchApiData() {
         currencies = JSON.stringify(data[0].currencies.name);
 
         var flagBox = `
-        <img src="${countryFlag}" alt="flag">
+        <img src="${countryFlag}" alt="flag" class="media-flag">
         `;
         $("#country-flag-div").append(flagBox);
 
