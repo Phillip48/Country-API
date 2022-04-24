@@ -66,6 +66,7 @@ html {
 .country-div {
     display: flex;
     justify-content: space-around;
+    flex-wrap: nowrap;
 }
 
 .dis-colmun {
@@ -87,18 +88,49 @@ html {
 } */
 
 /* Class from JS */
+
 .new-country-info {
     display: flex;
+    justify-content: center;
 }
+
+.new-country-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.div-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+.google-maps {
+    height: 350px;
+    width: 280px;
+} */
 
 /* ID */
 #travel-logo {
     width: 50rem;
 }
 
+/* media for responsive screens */
 @media screen and (max-width: 1110px) {
     #travel-logo {
         width: 45rem;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    * {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
 }
 
@@ -112,13 +144,6 @@ html {
     #travel-logo {
         width: 37rem;
     }
-
-    * {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
     .control {
         display: flex;
         justify-content: center;

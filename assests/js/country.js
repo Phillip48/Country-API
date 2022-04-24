@@ -42,6 +42,12 @@ function fetchApiData() {
         let continents = document.getElementById('display-country-info');
         continents = data[0].continents;
 
+        let borders = document.getElementById('display-country-info');
+        borders = data[0].borders;
+
+        let maps = document.getElementById('display-country-info');
+        maps = data[0].maps.googleMaps;
+
         let currencies = document.getElementById('display-country-info');
         currencies = JSON.stringify(data[0].currencies.name);
 
@@ -57,11 +63,29 @@ function fetchApiData() {
                     <p>Population: ${population} </p>
                     <p>Capital: ${capital}  </p>
                     <p>Continent: ${continents}  </p>
+                    <p>Country Borders: ${borders} </p>
                     <p>Currencies: ${currencies}  </p>
+                    
                 </div>
             </div>
         `;
         $("#display-country-info").append(newBox);
+
+
+        let mapbox = `<div class= "google-maps">
+                      <iframe
+                        width="280"
+                        height="300"
+                        style="border: 1px solid black;"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB4ei3CuVhlWhedmkq1KWjebDbfLid1j3w
+                        &q=${userCountry}">
+                      </iframe>
+                    </div>
+          `
+          $("#maps-display").append(mapbox);
         
         // console.log(countryFlag);
         // console.log(infoArray[name]);
