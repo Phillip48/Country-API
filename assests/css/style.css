@@ -102,9 +102,15 @@ html {
     }
 }
 
+@media screen and (max-height: 950px) {
+    #travel-logo {
+        width: 37rem;
+    }
+}
+
 @media screen and (max-width: 950px) {
     #travel-logo {
-        width: 35rem;
+        width: 37rem;
     }
 
     * {
@@ -128,7 +134,7 @@ html {
     }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 590px) {
     #travel-logo {
         width: 25rem;
     }
