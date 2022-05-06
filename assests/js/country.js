@@ -105,9 +105,5 @@ function userResponse() {
     fetchApiData(userValue);
   }
 }
-// function reloadPage() {
-//   location.reload();
-//   userResponse();
-// };
 
 submitBtn.addEventListener("click", userResponse);
