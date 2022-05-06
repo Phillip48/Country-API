@@ -14,11 +14,10 @@ function fetchApiData() {
       return response.json(); 
     })
     .then(function (data) {
-      console.log(data);
       // Added elements onto page
 
-      let infoArray = [];
-      infoArray = data.infoArray;
+      // let infoArray = [];
+      // infoArray = data.infoArray;
         // let { name } = data.infoArray[i];
         let countryFlag = document.createElement('img');
         countryFlag = data[0].flags.png;
@@ -54,7 +53,7 @@ function fetchApiData() {
         var flagBox = `
         <img src="${countryFlag}" alt="flag" class="media-flag">
         `;
-        $("#country-flag-div").append(flagBox);
+        $("#country-flag-div").html(flagBox);
 
         var newBox = `
             <div class ="new-country-info">
@@ -69,7 +68,7 @@ function fetchApiData() {
                 </div>
             </div>
         `;
-        $("#display-country-info").append(newBox);
+        $("#display-country-info").html(newBox);
 
 
         let mapbox = `<div class= "google-maps">
@@ -85,7 +84,7 @@ function fetchApiData() {
                       </iframe>
                     </div>
           `
-          $("#maps-display").append(mapbox);
+          $("#maps-display").html(mapbox);
         
         // console.log(countryFlag);
         // console.log(infoArray[name]);
@@ -94,8 +93,8 @@ function fetchApiData() {
     .catch((error) => console.log("Error fetchin Yelp data:", error));
 }
 
-function userResponse(event) {
-  event.preventDefault();
+function userResponse() {
+  // event.preventDefault();
   var userValue = inputArea.value.trim();
 
   // if statement to make sure user inputs text
@@ -106,5 +105,9 @@ function userResponse(event) {
     fetchApiData(userValue);
   }
 }
+// function reloadPage() {
+//   location.reload();
+//   userResponse();
+// };
 
 submitBtn.addEventListener("click", userResponse);
