@@ -10,8 +10,8 @@
 -[Contributors](#Contributors)  
 
 ## Description  
-Type here
-[Live link]()  
+Who doesn't wanna travel the world? This personal project was to get use to API's. It works by using REST Countries API and the Google Maps API. This app allows you to see where a country is located and some information about the country. 
+[Live link](https://phillip48.github.io/Country-API/)  
 
 ## Images  
 ![Img 1]()  
