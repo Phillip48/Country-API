@@ -24,6 +24,7 @@ html {
   margin: auto;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .btn-logo {
@@ -252,6 +253,7 @@ html {
     margin: 0;
   }
   .img-text{
+    width: 12rem;
     margin-right: 2rem;
   }
 }
