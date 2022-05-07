@@ -1,10 +1,17 @@
+/* Root */
 :root {
   --divcolor: #d9826c;
 }
 
+
+/* ==========================================  */
+/* Semantic elements */
+
 html {
   scroll-behavior: smooth;
 }
+
+/* ==========================================  */
 
 /*  Header Classes  */
 .sticky-header {
@@ -54,7 +61,7 @@ html {
   height: 3rem;
 }
 
-/*  Classes  */
+/*  Main Classes  */
 .img-container {
   display: flex;
   flex-direction: column;
@@ -156,12 +163,8 @@ html {
   width: 350px;
   height: 255px;
 }
-/* 
-  .country-info {
-  
-  } */
 
-/* Class from JS */
+/* Classes from JS */
 
 .new-country-info {
   display: flex;
@@ -187,18 +190,16 @@ html {
       height: 350px;
       width: 280px;
   } */
+/* ==========================================  */
 
 /* ID */
-#travel-logo {
-  width: 50rem;
-}
+
+
+/* ==========================================  */
+
 
 /* media for responsive screens */
-@media screen and (max-width: 1110px) {
-  #travel-logo {
-    width: 45rem;
-  }
-}
+/* Width */
 
 @media screen and (max-width: 1070px) {
   .country-div,
@@ -215,16 +216,8 @@ html {
   }
 }
 
-@media screen and (max-height: 950px) {
-  #travel-logo {
-    width: 37rem;
-  }
-}
 
 @media screen and (max-width: 950px) {
-  #travel-logo {
-    width: 37rem;
-  }
   .control {
     display: flex;
     justify-content: center;
@@ -260,10 +253,6 @@ html {
   .img-text{
     margin-right: 2rem;
   }
-  /* .img-text{
-    justify-content: center;
-    margin-right: auto;
-  } */
 }
 
 @media screen and (max-width: 500px) {
@@ -278,12 +267,10 @@ html {
   .img-text{
     margin-right: 0;
   }
-  /* .img-text{
-    justify-content: center;
-    margin-right: auto;
-  } */
+  .input-box{
+    width: 230px;
+  }
 }
-
 
 @media screen and (max-width: 350px) {
   .country-flag {
@@ -296,3 +283,40 @@ html {
     height: 115px;
   }
 }
+/* ==========================================  */
+
+/* height */
+@media screen and (max-height: 1150px) {
+  .sticky-header{
+    height: 10vh
+  }
+  .colored-forum{
+    height: 20vh;
+  }
+}
+
+@media screen and (max-height: 870px) {
+  .colored-forum{
+    height: 23vh;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .travel-logo {
+    width: 5rem;
+  }
+  .input-box{
+    height: 1.5rem;
+  }
+}
+
+
+
+/* both width and height */
+
+@media screen and (max-height: 600px) and (max-width: 800px) {
+  .input-box{
+    height: 1.5rem;
+  }
+}
+/* ==========================================  */
