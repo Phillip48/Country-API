@@ -1,190 +1,261 @@
-html {
+:root {
+    --divcolor: #d9826c;
+  }
+  
+  html {
     scroll-behavior: smooth;
-}
-
-
-
-/*  Classes  */
-.img-container {
+  }
+  
+  /*  Header Classes  */
+  .sticky-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--divcolor);
+    width: 100%;
+    height: 8vh;
+    margin: auto;
+    position: sticky;
+    top: 0;
+  }
+  
+  .btn-logo {
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+  }
+  
+  .travel-logo {
+    width: 8rem;
+    margin-left: 8rem;
+  }
+  
+  .header-button-div {
+    display: flex;
+    margin-right: 8rem;
+  }
+  
+  .nav-tag {
+    background: none;
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    padding: 0.5rem;
+    font-size: larger;
+    font-weight: 500;
+  }
+  
+  .input-box {
+      width: 300px;
+      height: 3rem;
+  }
+  
+  /*  Classes  */
+  .img-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-
-.background-img {
+    align-items: flex-end;
+  }
+  
+  .background-img {
     background-image: url(./img/globe.jpeg);
-    /* background-color: #BFD6F5;
-    background-blend-mode: multiply; */
     width: 100%;
-    height: 100vh;
+    height: 55vh;
     background-size: cover;
     background-attachment: fixed;
-    background-position: top;
-}
-
-.div-text-img {
+    background-position: bottom;
+  }
+  
+  .img-text{
+      display: flex;
+      flex-direction: column;
+      margin-right: 15rem;
+  }
+  
+  .div-text-img {
     display: flex;
     justify-content: center;
-}
-
-.instruction-container {
+  }
+  
+  .colored-forum {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--divcolor);
+    width: auto;
+    height: 15vh;
+  }
+  
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+  }
+  
+  .instruction-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-}
-
-.text-div {
+  }
+  
+  .text-div {
     display: flex;
     justify-content: center;
-}
-
-.ins-header {
+  }
+  
+  .ins-header {
     color: black;
     font-size: 40px;
-}
-
-.ins-p {
+  }
+  
+  .ins-p {
     color: black;
     font-size: 25px;
     /* margin: 1rem; */
-}
-
-.control {
+  }
+  
+  .control {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-}
-
-.input {
+  }
+  
+  .input {
     width: 65%;
-}
-
-.country-div {
+  }
+  
+  .country-div {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-}
-
-.dis-colmun {
+  }
+  
+  .dis-colmun {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.country-flag {
+  }
+  
+  .country-flag {
     padding: 1rem;
     margin: 3rem;
     border: 1px solid black;
     width: 350px;
-    height: 260px;
-}
-/* 
-.country-info {
-
-} */
-
-/* Class from JS */
-
-.new-country-info {
+    height: 255px;
+  }
+  /* 
+  .country-info {
+  
+  } */
+  
+  /* Class from JS */
+  
+  .new-country-info {
     display: flex;
     justify-content: center;
-}
-
-.new-country-text {
+  }
+  
+  .new-country-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-}
-.div-map {
+  }
+  .div-map {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-/* 
-.google-maps {
-    height: 350px;
-    width: 280px;
-} */
-
-/* ID */
-#travel-logo {
+  }
+  
+  /* 
+  .google-maps {
+      height: 350px;
+      width: 280px;
+  } */
+  
+  /* ID */
+  #travel-logo {
     width: 50rem;
-}
-
-/* media for responsive screens */
-@media screen and (max-width: 1110px) {
+  }
+  
+  /* media for responsive screens */
+  @media screen and (max-width: 1110px) {
     #travel-logo {
-        width: 45rem;
+      width: 45rem;
     }
-}
-
-@media screen and (max-width: 1070px) {
-    * {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-    .div-map {
-        padding: 1rem;
-    }
-}
-
-@media screen and (max-height: 950px) {
-    #travel-logo {
-        width: 37rem;
-    }
-}
-
-@media screen and (max-width: 950px) {
-    #travel-logo {
-        width: 37rem;
-    }
-    .control {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 600px) {
+  }
+  
+  @media screen and (max-width: 1070px) {
     * {
       flex-direction: column;
       justify-content: center;
       text-align: center;
     }
-}
-
-@media screen and (max-width: 590px) {
-    #travel-logo {
-        width: 25rem;
+    .div-map {
+      padding: 1rem;
     }
-}
-
-@media screen and (max-width: 410px) {
+  }
+  
+  @media screen and (max-height: 950px) {
     #travel-logo {
-        width: 20rem;
+      width: 37rem;
     }
-}
-
-@media screen and (max-width: 350px) {
+  }
+  
+  @media screen and (max-width: 950px) {
     #travel-logo {
-        width: 15rem;
+      width: 37rem;
+    }
+    .control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    * {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 590px) {
+    #travel-logo {
+      width: 25rem;
+    }
+  }
+  
+  @media screen and (max-width: 410px) {
+    #travel-logo {
+      width: 20rem;
+    }
+  }
+  
+  @media screen and (max-width: 350px) {
+    #travel-logo {
+      width: 15rem;
     }
     .country-flag {
-        width: 250px;
-        height: 150px;
+      width: 250px;
+      height: 150px;
     }
-
+  
     .media-flag {
-        width: 200px;
-        height: 115px;
+      width: 200px;
+      height: 115px;
     }
-}
+  }
+  
