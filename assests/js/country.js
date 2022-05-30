@@ -79,7 +79,7 @@ function fetchApiData() {
                         loading="lazy"
                         allowfullscreen
                         referrerpolicy="no-referrer-when-downgrade"
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB4ei3CuVhlWhedmkq1KWjebDbfLid1j3w
+                        src="https://www.google.com/maps/embed/v1/place?key=${disabled}
                         &q=${userCountry}">
                       </iframe>
                     </div>
