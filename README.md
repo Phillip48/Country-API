@@ -1,5 +1,6 @@
 # Country-API
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)  
+##Dsiabled the google maps on this project... Please go to version 2 to see the new and better version of this project
   
 ## Table of contents   
 -[Description](#Description)   
